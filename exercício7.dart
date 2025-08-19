@@ -7,7 +7,7 @@ void main() {
  String cargo = stdin.readLineSync()!.toLowerCase();
 
   double percentual;
-  if ((cargo == "Gerente"){
+  if (cargo == "Gerente"){
     percentual = 0.10;
   }else if (cargo == "Engenheiro") {
     percentual = 0.20;

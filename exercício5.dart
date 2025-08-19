@@ -3,7 +3,6 @@ void main() {
   print("Digite o preço do produto: ");
   double preco = double.parse(stdin.readLineSync()!);
   
-  // Mostra opções de pagamento
   print("\nFormas de pagamento:");
   print("0 - À vista (25% de desconto)");
   print("1 - Cheque (30 dias) (20% de desconto)");
@@ -11,7 +10,6 @@ void main() {
   print("3 - Cartão Crédito (3x) (5% de desconto)");
   print("Outro - Negociado com vendedor (Sem desconto)");
 
-  // Lê a condição escolhida
   print("\nDigite o código da forma de pagamento: ");
   int codigo = int.parse(stdin.readLineSync()!);
 

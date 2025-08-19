@@ -1,6 +1,5 @@
 import 'dart:io';
 void main(){
-  // ---------- MENU ----------
   print("===== Lanchonete XYZ =====");
   print("\nSalgados:");
   print("101 - Coxinha    (R\$ 4.50)");
@@ -12,19 +11,16 @@ void main(){
   print("202 - Refrigerante (R\$ 4.50)");
   print("203 - Suco        (R\$ 5.50)\n");
 
-  // ---------- ESCOLHA DO SALGADO ----------
   stdout.write("Digite o código do salgado: ");
   int codSalgado = int.parse(stdin.readLineSync()!);
   stdout.write("Quantidade de salgados: ");
   int qtdSalgado = int.parse(stdin.readLineSync()!);
 
-  // ---------- ESCOLHA DA BEBIDA ----------
   stdout.write("Digite o código da bebida: ");
   int codBebida = int.parse(stdin.readLineSync()!);
   stdout.write("Quantidade de bebidas: ");
   int qtdBebida = int.parse(stdin.readLineSync()!);
 
-  // ---------- PREÇOS E NOMES ----------
   String nomeSalgado = "";
   double precoSalgado = 0;
   if (codSalgado == 101) { 
@@ -51,19 +47,16 @@ void main(){
           return; 
           }
 
-  // ---------- CÁLCULO ----------
   double totalSalgado = precoSalgado * qtdSalgado;
   double totalBebida = precoBebida * qtdBebida;
   double total = totalSalgado + totalBebida;
 
-  // ---------- DESCONTO ----------
   bool descontoAplicado = false;
   if (total > 100.00) {
     total *= 0.90; 
     descontoAplicado = true;
   }
 
-  // ---------- RESUMO ----------
   print("\n===== RESUMO DO PEDIDO =====");
   print("$qtdSalgado x $nomeSalgado (R\$ ${precoSalgado.toStringAsFixed(2)} cada) → R\$ ${totalSalgado.toStringAsFixed(2)}");
   print("$qtdBebida x $nomeBebida (R\$ ${precoBebida.toStringAsFixed(2)} cada) → R\$ ${totalBebida.toStringAsFixed(2)}");
